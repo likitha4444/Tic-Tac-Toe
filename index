@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game | Classic Two-Player Strategy Game</title>
+    <meta name="description" content="Play the classic Tic-Tac-Toe game with a friend. Features responsive design, smooth animations, and intuitive gameplay for desktop and mobile devices.">
+    <meta property="og:title" content="Tic-Tac-Toe Game - Classic Two-Player Strategy">
+    <meta property="og:description" content="Enjoy the timeless Tic-Tac-Toe game with clean design and smooth gameplay. Perfect for quick matches with friends.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header -->
+        <header class="game-header">
+            <div class="header-content">
+                <div class="game-icon">🎮</div>
+                <h1 class="game-title">Tic-Tac-Toe</h1>
+            </div>
+            <p class="game-subtitle">Classic two-player strategy game</p>
+        </header>
+
+        <!-- Game Status -->
+        <div class="status-card">
+            <div class="status-content">
+                <div class="status-info">
+                    <span class="status-icon">👥</span>
+                    <span id="game-status" class="status-text">Player X's turn</span>
+                    <div id="current-player-indicator" class="player-indicator x-player"></div>
+                </div>
+                <div id="victory-badge" class="victory-badge hidden">
+                    <span class="trophy-icon">🏆</span>
+                    <span class="victory-text">Victory!</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Board -->
+        <div class="board-card">
+            <div class="game-board" id="game-board">
+                <button class="game-cell" data-index="0" aria-label="Cell 1, empty"></button>
+                <button class="game-cell" data-index="1" aria-label="Cell 2, empty"></button>
+                <button class="game-cell" data-index="2" aria-label="Cell 3, empty"></button>
+                <button class="game-cell" data-index="3" aria-label="Cell 4, empty"></button>
+                <button class="game-cell" data-index="4" aria-label="Cell 5, empty"></button>
+                <button class="game-cell" data-index="5" aria-label="Cell 6, empty"></button>
+                <button class="game-cell" data-index="6" aria-label="Cell 7, empty"></button>
+                <button class="game-cell" data-index="7" aria-label="Cell 8, empty"></button>
+                <button class="game-cell" data-index="8" aria-label="Cell 9, empty"></button>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls-card">
+            <div class="controls-content">
+                <button id="new-game-btn" class="btn btn-primary">
+                    <span class="btn-icon">🔄</span>
+                    New Game
+                </button>
+                <button id="reset-scores-btn" class="btn btn-secondary">
+                    Reset Scores
+                </button>
+            </div>
+        </div>
+
+        <!-- Scoreboard -->
+        <div class="scoreboard-card">
+            <div class="scoreboard-header">
+                <span class="trophy-icon">🏆</span>
+                <h2 class="scoreboard-title">Scoreboard</h2>
+            </div>
+            <div class="scoreboard-content">
+                <div class="score-section">
+                    <div class="player-symbol x-symbol">X</div>
+                    <div id="x-score" class="score-value">0</div>
+                    <div class="score-label">Wins</div>
+                </div>
+                
+                <div class="score-section">
+                    <div class="score-label-ties">Ties</div>
+                    <div id="ties-score" class="score-value">0</div>
+                    <div class="score-label">Games</div>
+                </div>
+                
+                <div class="score-section">
+                    <div class="player-symbol o-symbol">O</div>
+                    <div id="o-score" class="score-value">0</div>
+                    <div class="score-label">Wins</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="game-footer">
+            <p>Classic Tic-Tac-Toe • Built with HTML, CSS & JavaScript</p>
+        </footer>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden">
+        <div class="toast-content">
+            <span id="toast-title" class="toast-title"></span>
+            <span id="toast-message" class="toast-message"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
